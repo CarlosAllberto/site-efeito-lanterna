@@ -1,0 +1,52 @@
+:root {
+    --cursorXpos: 50%;
+    --cursorYpos: 50%
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #000011;
+    color: #FFFFE0;
+    font-size: 1.3rem;
+    line-height: 40px;
+}
+
+.container { padding: 0 10rem; }
+
+section { padding: 50px 0; }
+
+.w-100 { width: 100%; }
+.d-flex { display: flex; }
+.justify-content-end { justify-content: flex-end; }
+.mb-5 { margin-bottom: 3rem; }
+
+#light {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: radial-gradient(circle 8rem at var(--cursorXpos) var(--cursorYpos), rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.95) 100%);
+    pointer-events: none;
+}
+
+#light.on { display: none; }
+
+#interruptor {
+    width: 60px;
+    cursor: pointer !important;
+}
+
+#lanterna {
+    width: 50px;
+    position: fixed;
+    padding: 0;
+    margin: 0;
+    top: calc(var(--cursorYpos) + 100px);
+    left: calc(var(--cursorXpos) - 100px);
+}
+#lanterna img { width: 100%; }
